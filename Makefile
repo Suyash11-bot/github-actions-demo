@@ -21,3 +21,9 @@ format:
 
 test:
 	python -m pytest -vv --cov=hello test_hello.py
+
+.PHONY: check
+
+check:
+	$(MAKE) lint
+	$(MAKE) test
